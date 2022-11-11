@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worksheet 5</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/index.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <img src="img/circulo.png" alt="" id="imgHeader">
+        <h1>The Reading List</h1>
+    </header>
+    <main>
+        <section id="addbook">
+            <h2>Book</h2>
+            <form action="">
+                <label for="">Title
+                    <input type="text" id="titulo">
+                </label>
+                <label for="">Author
+                    <input type="text" id="autor">
+                </label>
+                <label for="">Genre
+                    <input type="text" id="genero">
+                </label>
+                <input type="submit" id="submit" value="Add Book">
+            </form>
+        </section>
+        <section id="booklist">
+            <h2>My Reading List</h2>
+            <p>Books Read: <span id="booksRead">0</span></p>
+            <div class="books">
+                <ul id="readingList">
+
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2022 - Álvaro García Campos
+    </footer>
+</body>
+</html>
