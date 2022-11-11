@@ -29,10 +29,25 @@ function loseLive(){
     }
 }
 
+function checkResult() {
+    let contadorWin = 0;
+    for(let i = 1; i < answer.childNodes.length; i++){
+        console.log(answer.childNodes[i])
+        if(answer.childNodes[i].innerHTML != ""){
+            contadorWin++;
+        }
+    }
+    console.log(contadorWin)
+    console.log(wordToGuess.length)
+    if(contadorWin == wordToGuess.length){
+        document.getElementById("win").innerHTML = "HAS GANADO"
+    }
+}
+
 window.onload = ()=>{
     lives = 10;
     let randomWord = Math.floor(Math.random() * palabras.length);
-    let wordToGuess = palabras[randomWord];
+    wordToGuess = palabras[randomWord];
     console.log(wordToGuess)
     let answer = document.getElementById("answer");
     for(let i=0; i < wordToGuess.length; i++){
@@ -44,6 +59,7 @@ window.onload = ()=>{
     letrasAlphabet.forEach(letra => {
         letra.onclick = ()=>{
             checkLetter(letra,wordToGuess);
+            checkResult();
         };
     });
 }
