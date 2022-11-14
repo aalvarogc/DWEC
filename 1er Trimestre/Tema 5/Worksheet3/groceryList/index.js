@@ -43,12 +43,7 @@ function deleteElement(elemento){
 }
 
 function cleanList(list){
-    if(list.hasChildNodes()){
-        let children = list.childNodes;
-        for(i = 1; i < children.length; i++){
-            children[i].remove();
-        }
-    }
+    list.innerHTML = "";
 }
 
 
